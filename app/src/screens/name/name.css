@@ -1,0 +1,66 @@
+@font-face {
+    font-family: 'H';
+    src: local('H'), url(../../assets/hysterix.ttf) format('truetype');
+  }
+body {
+    background-image: url("../../assets/bg.png");
+    background-color: #cccccc;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'H';
+   }
+h1{
+    text-shadow: 4px 6px #A384E2;
+    color: #FFF;
+    font-size: 10vh;
+    text-align: center;
+}
+.h22{
+    
+    color: #552DAA;
+    font-size: 2.5vh;
+    text-align: center;
+}
+.h23{
+    
+    color: #552DAA;
+    font-size: 2vh;
+    text-align: center;
+}
+.title{
+    align-self: center;
+
+}
+.box{
+    background-color: #FFF;
+}
+
+.button{
+    display: flex;
+    width: 80%;
+    margin-top: 10%;
+    align-self: center;
+    align-items: center;
+}
+.code{
+    position: absolute;
+    z-index: 2;
+    align-self: center;
+    left: 25%;
+    top: 72.5%;
+    background-color: transparent;
+    border: none;
+    border-style: none;
+    font-size: 5vh;
+    font-family: 'H';
+    width: 32%;
+    color: #A384E2;
+    outline: none;
+}
+code ::placeholder {
+    color: #A384E2;
+    outline: none;
+}
+text :hover{
+    color: #A384E2;
+}

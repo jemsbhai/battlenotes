@@ -1,0 +1,47 @@
+@font-face {
+    font-family: 'H';
+    src: local('H'), url(../../assets/hysterix.ttf) format('truetype');
+  }
+body {
+    background-image: url("../../assets/bg.png");
+    background-color: #cccccc;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'H';
+   }
+h1{
+    text-shadow: 4px 6px #A384E2;
+    color: #FFF;
+    font-size: 10vh;
+    text-align: center;
+    vertical-align:middle;
+}
+.h2{
+    
+    color: #552DAA;
+    font-size: 4vh;
+    text-align: center;
+}
+.title{
+    align-self: center;
+    vertical-align: middle;
+    margin-top: 20%;
+
+}
+.box{
+    background-color: #FFF;
+}
+.shadow {
+    -webkit-filter: drop-shadow( 5px 5px rgb(61, 27, 83));
+    filter: drop-shadow( 10px 10px rgb(81, 57, 97));
+  }
+.buttons{
+    display: flex;
+    width: 80%;
+    margin-top: 15%;
+    align-self: center;
+    align-items: center;
+}
+text :hover{
+    color: #A384E2;
+}
