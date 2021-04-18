@@ -7,15 +7,23 @@ Created on Fri Apr 16 09:04:42 2021
 
 import pyaudio
 import wave
+import pretty_midi
 from note_recognition import main
+from solo_generation_esac import *
 
 if __name__ == "__main__":
+    
+    solo_id, mel_id = get_solo_melody(4)
+    file, opusnum = get_abc_file(solo_id)
+    midi_list = get_correct_notes(mel_id)
+    notes_list = [pretty_midi.note_number_to_name(note)[:-1] for note in midi_list]
+    display_music(file, opusnum)
         
     chunk = 1024  # Record in chunks of 1024 samples
     sample_format = pyaudio.paInt16  # 16 bits per sample
     channels = 2
     fs = 44100  # Record at 44100 samples per second
-    seconds = 5
+    seconds = 20
     filename = "output.wav"
     
     p = pyaudio.PyAudio()
@@ -59,5 +67,5 @@ if __name__ == "__main__":
     wf.close()
     
     # run analysis
-    main(filename, note_arr=['C', 'E', 'G'], plot_starts=True)
-
+    #main(filename, note_arr=['C', 'E', 'G'], plot_starts=True)
+    main("output.wav", notes_list, plot_starts=True)

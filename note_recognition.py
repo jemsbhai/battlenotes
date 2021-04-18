@@ -1,10 +1,11 @@
-
+# taken largely from https://github.com/ianvonseggern1/note-prediction
 
 from pydub import AudioSegment
 import pydub.scipy_effects
 import numpy as np
 import scipy
 import matplotlib.pyplot as plt
+from solo_generation_esac import *
 
 from utils import frequency_spectrum, \
     calculate_distance, \
@@ -13,12 +14,8 @@ from utils import frequency_spectrum, \
     classify_note_attempt_3
 
 
-def main(file, note_file=None, note_arr=None, plot_starts=False, plot_fft_indices=[]):
+def main(file, note_arr=None, plot_starts=False, plot_fft_indices=[]):
     actual_notes = []
-    if note_file:
-        with open(note_file) as f:
-            for line in f:
-                actual_notes.append(line.strip())
                 
     if note_arr:
         actual_notes = note_arr
@@ -132,3 +129,4 @@ def predict_notes(song, starts, plot_fft_indices):
 
 if __name__ == "__main__":
     main("untitled.wav", note_arr=["C", "D", "E", "F", "G", "A"], plot_starts=True)
+    
