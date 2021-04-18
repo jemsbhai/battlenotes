@@ -45,7 +45,7 @@ export default function Wait(props) {
     <div className="title1"><h1 className="h11">VS</h1></div>
     
     {p2 &&<div>
-            <img src={Typemaster} style={{height:400}} alt=""></img>
+            <img src={Fitfreak} style={{height:400}} alt=""></img>
     <svg style={{float:'left'}} class="shadow" id="main-box" viewBox="0 0 700 100" preserveAspectRatio="none" 
     xmlns="http://www.w3.org/2000/svg">
         <g>
