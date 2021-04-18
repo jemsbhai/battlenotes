@@ -2,12 +2,13 @@
     font-family: 'H';
     src: local('H'), url(../../assets/hysterix.ttf) format('truetype');
   }
-body {
-    background-image: url("../../assets/bg.png");
-    background-color: #cccccc;
+.body {
+    background-image: url("../../assets/bg2.png");
+    background-color: #A384E2;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size:cover;
     font-family: 'H';
+    height: 98vh;
    }
 .h11{
     text-shadow: 4px 6px #A384E2;
@@ -15,6 +16,17 @@ body {
     font-size: 5vh;
     text-align: center;
     vertical-align:middle;
+    float: left;
+    margin-left: 10%;
+}
+.h12{
+    text-shadow: 4px 6px #A384E2;
+    color: #FFF;
+    font-size: 5vh;
+    text-align: center;
+    vertical-align:middle;
+    float: right;
+    margin-right: 10%;
 }
 .h111{
     text-shadow: 4px 6px #A384E2;
@@ -37,10 +49,11 @@ body {
     font-size: 2vh;
     margin-left: 5%;
 }
-.title1{
+.players{
     align-self: center;
     vertical-align: middle;
     margin-top: 5%;
+    display: inline;
 
 }
 .box{
@@ -50,10 +63,10 @@ body {
     -webkit-filter: drop-shadow( 5px 5px rgb(61, 27, 83));
     filter: drop-shadow( 10px 10px rgb(81, 57, 97));
   }
-.charpick{
+.chars{
     display: flex;
     width: 50%;
-    margin-top: 5%;
+    margin-top: 70%;
     align-self: center;
     align-items: center;
     margin-left: 25%;

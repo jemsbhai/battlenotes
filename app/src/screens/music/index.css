@@ -1,0 +1,9 @@
+.body2 {
+    background-image: url("../../assets/bg3.png");
+    background-color: #cccccc;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'H';
+    margin: -10px -8px ;
+    height: 100vh;
+   }

@@ -1,0 +1,11 @@
+@font-face {
+    font-family: 'H';
+    src: local('H'), url(../../assets/hysterix.ttf) format('truetype');
+  }
+.body4 {
+    background-image: url("../../assets/turn.png");
+    background-color: #cccccc;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'H';
+   }

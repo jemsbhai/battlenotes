@@ -50,13 +50,13 @@ body {
     -webkit-filter: drop-shadow( 5px 5px rgb(61, 27, 83));
     filter: drop-shadow( 10px 10px rgb(81, 57, 97));
   }
-.charpick{
+.char{
     display: flex;
     width: 50%;
-    margin-top: 5%;
+    margin-top: 15%;
     align-self: center;
     align-items: center;
-    margin-left: 25%;
+    margin-left: 27.5%;
 }
 text :hover{
     color: #A384E2;
