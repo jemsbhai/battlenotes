@@ -12,8 +12,8 @@ from note_recognition import main
 from solo_generation_esac import *
 
 if __name__ == "__main__":
-    
-    solo_id, mel_id = get_solo_melody(4)
+    difficulty = 6
+    solo_id, mel_id = get_solo_melody(difficulty)
     file, opusnum = get_abc_file(solo_id)
     midi_list = get_correct_notes(mel_id)
     notes_list = [pretty_midi.note_number_to_name(note)[:-1] for note in midi_list]
@@ -23,7 +23,7 @@ if __name__ == "__main__":
     sample_format = pyaudio.paInt16  # 16 bits per sample
     channels = 2
     fs = 44100  # Record at 44100 samples per second
-    seconds = 20
+    seconds = difficulty*6
     filename = "output.wav"
     
     p = pyaudio.PyAudio()
@@ -68,4 +68,5 @@ if __name__ == "__main__":
     
     # run analysis
     #main(filename, note_arr=['C', 'E', 'G'], plot_starts=True)
-    main("output.wav", notes_list, plot_starts=True)
+    score = main("output.wav", notes_list, plot_starts=True)
+    print(score)

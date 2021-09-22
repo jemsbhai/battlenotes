@@ -36,8 +36,9 @@ def main(file, note_arr=None, plot_starts=False, plot_fft_indices=[]):
 
     if actual_notes:
         lev_distance = calculate_distance(predicted_notes, actual_notes)
+        score = abs(len(actual_notes) - lev_distance)/len(actual_notes)
         print("Levenshtein distance: {}/{}".format(lev_distance, len(actual_notes)))
-
+        return score
 
 # Very simple implementation, just requires a minimum volume and looks for left edges by
 # comparing with the prior sample, also requires a minimum distance between starts

@@ -21,7 +21,8 @@ def get_solo_melody(difficulty):
     # Load the solo data into a DataFrame
     solo_info_df = pd.read_sql_query(f"SELECT * from {solo_info}", con)
     # Get random solo with appropriate difficulty
-    solo = solo_info_df[abs(solo_info_df['avg_events_per_bar'] - difficulty) < 1].sample(1)
+    #solo = solo_info_df[abs(solo_info_df['avg_events_per_bar'] - difficulty) < 1].sample(1)
+    solo = solo_info_df[abs(solo_info_df['notes_per_melody'] - difficulty*10) < 10].sample(1)
     #solo_id = 'A0128A'
     solo_id = solo.iloc[0]['esacid']
     mel_id = solo.iloc[0]['melid']
@@ -83,9 +84,10 @@ def display_music(file, opusnum):
     out_filepath = conv_musicxml.write(s, 'musicxml', fp=filepath, subformats=['png'])
 
     # importing PIL
-    from PIL import Image
-    img = Image.open(filepath + '-1.png')
-    img.show()
+    #from PIL import Image
+    #img = Image.open(filepath + '-1.png')
+    #img.show()
+    s.show()
 
 
 def get_correct_notes(mel_id):
